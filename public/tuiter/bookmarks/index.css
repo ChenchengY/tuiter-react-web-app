@@ -1,0 +1,164 @@
+.wd-bg {
+  background-color: black;
+  margin-left: 16px;
+}
+
+.wd-container { 
+  
+  border:1px solid rgb(47, 51, 54);
+}
+
+.wd-container-radi { 
+  
+  border:1px solid rgb(47, 51, 54);
+  border-radius: 30px 30px 30px 30px;
+}
+
+.wd-wrapper {
+  padding-left:16px;
+  padding-bottom: 12px;
+}
+
+.wd-sm-gray-title {
+  font-size:15px;
+  margin-left:5px;
+  
+  color:rgb(110, 118, 125);
+  /* margin-left: 10px; */
+ }
+
+ .wd-sm-white-title {
+  font-size:15px;
+  font-weight: bold;
+  color:white;
+ }
+
+ .wd-text-container {
+  vertical-align: top;
+  padding-top:12px;
+  
+}
+.wd-paragraph-wrapper {
+  margin-top:12px;
+  margin-bottom:12px;
+  width:506px;
+}
+
+.wd-paragraph-wrapper-padding {
+  margin-top:12px;
+  margin-bottom:12px;
+  width:494px;
+  padding-left: 12px;
+}
+
+.wd-p {
+  margin-top:0px;
+  margin-bottom:0px;
+  font-size:15px;
+  color:white;
+}
+
+.wd-p-gray {
+  margin-top:5px;
+  margin-bottom:0px;
+  font-size:15px;
+  color:rgb(110, 118, 125);
+}
+
+.wd-icon-num {
+  font-size:15px;
+  color:rgb(110, 118, 125);
+}
+
+
+.wd-title {
+  color:white;
+  margin-top: 12px;
+  font-size: 20px;
+  vertical-align: top;
+ }
+
+ .wd-img {
+  
+  width:48px;
+  height:48px;
+  border-radius: 50%;
+ }
+
+ .wd-lg-img {
+  width:504px;
+  height:264px;
+  border-radius:30px 30px 0 0;
+  /* margin-bottom: 12px; */
+ }
+
+ .wd-wrapper-flex {
+  display: flex;
+ }
+
+.wd-icon-wrapper {
+  margin-top:12px;
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+ .wd-ddswrapper {
+  justify-content:space-between;
+  display:flex;
+ }
+
+ .wd-general-div {
+
+  padding: 0 12px 10px 16px;
+ }
+ 
+ .wd-setting {
+  font-size: 30px;
+ }
+
+ .wd-lg-title {
+  color:rgb(110, 118, 125);
+  padding: 16px;
+  font-size: 15px;
+ }
+
+ .wd-icon-span {
+  margin-right:12px;
+ }
+
+
+
+ .wd-active-title {
+  color: rgb(29,161,242);
+  border-bottom: 2px solid rgb(29,161,242);
+  padding-bottom: 10px;
+ }
+
+ .wd-title {
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  
+ }
+
+ .wd-img-container{
+  padding-right: 16px;
+  text-align: right;
+ }
+
+ .wd-sm-title{
+  font-size:13px;
+  /* font-weight:bold; */
+ }
+
+
+
+
+
+ .wd-table-container {
+  width:100%;
+ }
+
+
+
