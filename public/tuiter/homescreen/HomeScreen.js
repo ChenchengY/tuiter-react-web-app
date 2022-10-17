@@ -1,6 +1,6 @@
 import HomeComponent from "./HomeComponent.js";
-import NavigationSidebar from "../explore/NavigationSidebar/index.js";
-import PostSummaryList from "../explore/PostSummaryList/index.js";
+import NavigationSidebar from "../NavigationSidebar/index.js";
+import PostSummaryList from "../PostSummaryList/index.js";
 
 function HomeScreen() {
     let active="home"

@@ -8,11 +8,11 @@ const NavigationSidebar = (active) => {
       <a class="list-group-item" href="/">
       <i class="fab fa-twitter"></i></a>
 
-      <a class="list-group-item" id="home" href="../HomeScreen_new/index.html">
+      <a class="list-group-item" id="home" href="../HomeScreen/index.html">
       <i class="fa fa-home"></i>
       <span class="d-none d-xl-inline">Home</span></a>
 
-      <a class="list-group-item" id="explore" href="../explore/index_5.html">
+      <a class="list-group-item" id="explore" href="../explore/index.html">
       <i class="fa fa-hashtag"></i>
       <span class="d-none d-xl-inline">Explore</span></a>
 
