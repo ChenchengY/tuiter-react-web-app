@@ -3,7 +3,7 @@ function HelloWorld() {
  return (
    <div>
      <Nav/>
-     <h1>Hello World!</h1>
+     <h1 style={{color:"black"}}>Hello World!</h1>
    </div>
  );
 }

@@ -6,7 +6,7 @@ import TodoList from './todo/todo-list';
 function Assignment6() {
  return (
    <div>
-     <h1>Assignment 6</h1>
+     <h1 style={{color:"black"}}>Assignment 6</h1>
      <TodoList/>
      <ConditionalOutput/>
      <Styles/>

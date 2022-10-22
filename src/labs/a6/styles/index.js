@@ -17,7 +17,7 @@ const Styles = () => {
   };
   return(
     <div>
-      <h1>Styles</h1>
+      <h1 style={{color:"black"}}>Styles</h1>
       <div style={{"backgroundColor": "lightyellow",
         "color": "black", padding: "10px"}}>
         Yellow background</div>

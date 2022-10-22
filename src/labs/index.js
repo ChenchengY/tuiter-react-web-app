@@ -2,7 +2,7 @@ import Assignment6 from "./a6/index";
 import Nav from "../nav";
 function Labs() {
  return (
-   <div>
+   <div >
      <Nav/>
      <Assignment6/>
    </div>
