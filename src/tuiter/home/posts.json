@@ -11,7 +11,9 @@
     "comment":"595",
     "retweet":"1,168",
     "like":"11.1K",
-    "link":"space.com/updates"
+    "link":"space.com/updates",
+    "retweet_notification" : "Elon Musk Retweeted",
+    "show_more" : true
   },
 
   {
@@ -28,7 +30,9 @@
     "comment":"5,346",
     "retweet":"1,601",
     "like":"19.2K",
-    "link":""
+    "link":"",
+    "retweet_notification" : "",
+    "show_more" : false
 
   }
 

@@ -21,7 +21,9 @@ const PostItem = (
 ) => {
   return (
   <>
+
   <div className="wd-flex-column border border-secondary border-opacity-10 border-r p-3">
+  {post.retweet_notification !=="" && <div className='fw-bold text-muted pb-2'><i className="bi bi-repeat"> </i>{post.retweet_notification}</div>}
       <div className='wd-flex-row'>
           <div className='wd-flex-column d-inline-block'>
             <img width={40} height={40} className="rounded-circle" src={require(`../images/teslabot.jpg`)} alt=""/>
@@ -59,24 +61,28 @@ const PostItem = (
       </div>
           
       <div className="flex-row wd-flex-justifySpaceBetween ms-5 mt-2 text-muted pe-5">
-      <div>
-          <i className="bi bi-chat-left"> </i>
-           {post.comment}
+        <div>
+            <i className="bi bi-chat-left"> </i>
+            {post.comment}
+        </div>
+        <div>
+            <i className="bi bi-repeat"> </i>
+            {post.retweet}
+        </div>
+        <div>
+            <i className="bi bi-suit-heart"> </i>
+            {post.like}
+        </div>
+        <div>
+            <i className="bi bi-folder-symlink"> </i>
+        </div>
       </div>
-      <div>
-          <i className="bi bi-repeat"> </i>
-          {post.retweet}
-      </div>
-      <div>
-          <i className="bi bi-suit-heart"> </i>
-          {post.like}
-      </div>
-      <div>
-          <i className="bi bi-folder-symlink"> </i>
-          
-      </div>
-  </div>
-          </div>
+      {post.show_more && 
+          <div className='ps-5 pt-3' >
+            <a style={{textDecorationLine: 'none'}} href='/#'>Show this thread</a>
+          </div>}
+
+    </div>
 
       
   </>);
