@@ -2,6 +2,9 @@ import React from 'react';
 import './index.css';
 import './bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
+// import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 const PostItem = (
 {
   post = {
@@ -74,7 +77,9 @@ const PostItem = (
             {post.like}
         </div>
         <div>
-            <i className="bi bi-folder-symlink"> </i>
+            {/* <i className="fas fa-external-link-alt"> </i> */}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            {/* <FontAwesomeIcon icon={['fab', 'apple']} /> */}
         </div>
       </div>
       {post.show_more && 
