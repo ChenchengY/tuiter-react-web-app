@@ -1,6 +1,6 @@
 import React from 'react';
-import posts from "./posts.json"
-import PostItem from "./post-item.js"
+// import posts from "./posts.json"
+// import PostItem from "./post-item.js"
 import TuitsList from "../tuits/tuits-list";
 import WhatsHappening from "./whats-happening";
 

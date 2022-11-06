@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCircleCheck, faShareAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faShareAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const TuitStats = (
 {

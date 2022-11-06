@@ -4,7 +4,7 @@ import './bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 // import 'font-awesome/css/font-awesome.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCircleCheck, faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import TuitStats from './tuit-stats';
 import {useDispatch} from "react-redux";
 import { deleteTuit } from './tuits-reducer';
