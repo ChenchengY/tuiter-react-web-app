@@ -6,6 +6,8 @@ import './index.css';
 import moment from 'moment';
 import { updateProfile } from "./profile-reducer";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const EditProfileComponent = () => {
     const savedProfile = useSelector((state) => state.profile);
@@ -43,34 +45,27 @@ const EditProfileComponent = () => {
     }
 
     return (
-        <div className='wd-profile-container'>
+        <div className='wd-profile-container pt-2'>
             <form onSubmit={updateProfileHandler}>
-                <div className='wd-edit-profile-header-container'>
-                    <div className="wd-profile-header ">
-                        <Link to="/tuiter/profile" className="wd-close-icon">
-                            {/* TODO fix icon */}
-                            <i className="fa-solid fa-xmark fa-xl"></i>
-                        </Link>
-
-                        <div className='wd-profile-name'>
-                            Edit Profile
-                        </div>
-                    </div>
-                    <div>
+                <div style={{justifyContent:"space-between", flexDirection:"row",display:"flex", alignItems:"center"}}>
+										<div className="fs-5 fw-bold">
+                        <Link to="/tuiter/profile" className="bi bi-x-lg pe-4" /> Edit Profile
+											</div>
+                    <div className="fs-6">
                         <input className="wd-profile-save-btn" type="submit" value="Save" />
                     </div>
                 </div>
-                <div className='wd-picture-container'>
-                    <div>
-                        <div className='wd-banner-picture'>
-                            <img src={require(`../images/${profile.bannerPicture}`)} alt="Banner" height="200px" width="100%" />
-                        </div>
-                        <div className='wd-profile-picture'>
-                            <img src={require(`../images/${profile.profilePicture}`)} alt="Profile" height="150px" width="150px" />
-                        </div>
-                    </div>
-                </div>
-                <div>
+                <div className="pt-3">
+									<div style={{position:"relative"}}>
+											<img src={require(`../images/${profile.bannerPicture}`)} alt="Banner" height="200px" width="100%" />
+									</div>
+									<div style={{position:"absolute", marginTop:"-60px", marginLeft:"20px"}}>
+											<img className='rounded-circle' 
+												src={require(`../images/${profile.profilePicture}`)} alt="Profile" height="120px" width="120px" />
+									</div>
+									</div>
+                
+                <div style={{marginTop:"90px"}}>
 
                     <EditProfileInputComponent
                         handleInputChange={handleNameInputChange}
@@ -94,15 +89,17 @@ const EditProfileComponent = () => {
                         value={profile.website}
                         label="Website"
                     />
-                    {/* TODO validate date format */}
+                    
+
                     <EditProfileInputComponent
                         handleInputChange={(event) => handleInputChange(event, "dateOfBirth")}
                         value={moment(profile.dateOfBirth).format('YYYY-MM-DD')}
                         label="Birth Date"
-                        inputType="date"
+                        inputType="date"		
                     />
-                    <div>
-                        Switch to professional
+                    <div style={{justifyContent:"space-between", flexDirection:"row",display:"flex", alignItems:"center"}}>
+                        <div>Switch to professional</div>
+												<FontAwesomeIcon icon={faChevronRight}/>
                     </div>
 
                 </div>

@@ -15,6 +15,7 @@ import { configureStore }
 import {Provider} from "react-redux";
 import tuitsReducer from "./tuits/tuits-reducer";
 import profileReducer from "./profile/profile-reducer";
+
 const store = configureStore(
   {reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}});
 

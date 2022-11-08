@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './index.css';
 const EditProfileInputComponent = ({ handleInputChange, value, label, inputType = "text" }) => {
+	const[focused, setForcused] = useState(false);
     return (
         <div className="wd-profile-input-container">
-            <div className="wd-profile-input-label ">
+            <div className="text-muted">
                 <label>
                     {label}
                 </label>
@@ -12,7 +13,9 @@ const EditProfileInputComponent = ({ handleInputChange, value, label, inputType 
                 type={inputType}
                 value={value}
                 onChange={handleInputChange}
-            className="wd-profile-input"
+								onFocus={()=>setForcused(true)}
+								onBlur={()=>setForcused(false)}
+            style={{width:"100%", backgroundColor: focused ? "lightgray" : "white", color:"black", border:"none"}}
             />
         </div>
     )
