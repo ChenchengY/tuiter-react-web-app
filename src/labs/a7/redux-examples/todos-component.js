@@ -37,14 +37,13 @@ const Todos = () => {
      <h3 style={{color:"black"}}>Todos</h3>
      <ul className="list-group">
       <li className="list-group-item">
-      <button onClick={createTodoClickHandler}
-               className="btn btn-primary w-25 
-                          float-end">
-              Create</button>
+      <button onClick={createTodoClickHandler} className="btn btn-primary w-25 float-end">
+               Create
+           </button>
         <input
           onChange={todoChangeHandler}
           value={todo.do}
-          className="form-control"/>
+          className="form-control w-75"/>
       </li>
        {
          todos.map((todo, index) =>
