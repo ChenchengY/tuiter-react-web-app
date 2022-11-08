@@ -35,13 +35,14 @@ const TuitItem = (
 }
   return (
   <>
-  <div className="wd-flex-column border border-secondary border-opacity-10 border-r p-3">
+  <div className="wd-flex-col border border-secondary border-opacity-10 border-r p-3">
       <div className='wd-flex-row'>
-          <div className='wd-flex-column d-inline-block'>
-            <img width={40} height={40} className="rounded-circle" src={require(`../images/teslabot.jpg`)} alt=""/>
+          <div className='wd-flex-col d-inline-block'>
+            <img width={40} height={40} className="rounded-circle" src={require(`../images/teslabot.jpg`)} 
+              alt=""/>
           </div>
-          <div className='ps-3'>
-              <div style={{justifyContent:"space-between", display:"flex"}}>
+          <div className='ps-3 wd-flex-col-wd90'>
+              <div className='wd-flex-row-redux'>
               
                   <div>
                     <div className="fw-bold">
@@ -50,17 +51,16 @@ const TuitItem = (
                     <span className=" fw-normal text-muted"> {tuit.handle} · {tuit.time}</span>
                     </div>
                   </div>
-                 
-                  {/* <span>&#8943;</span> */}
-                  <i className="bi bi-x-lg" 
-                   onClick={() => deleteTuitHandler(tuit._id)}></i>
                   
-              </div>
-              
+                  <i className="bi bi-x-lg float-end" 
+                  onClick={() => deleteTuitHandler(tuit._id)}></i>
+                  
+              </div> 
               <p>{tuit.tuit}</p>
               
           </div>
       </div>
+
       
       <TuitStats key={tuit._id} tuit={tuit} />
 
