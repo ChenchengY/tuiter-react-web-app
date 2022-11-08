@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './index.css';
-const EditProfileInputComponent = ({ handleInputChange, value, label, inputType = "text" }) => {
+const EditProfileInput = ({ handleInputChange, value, label, inputType = "text" }) => {
 	const[focused, setForcused] = useState(false);
     return (
         <div className="wd-profile-input-container">
@@ -21,4 +21,4 @@ const EditProfileInputComponent = ({ handleInputChange, value, label, inputType 
     )
 }
 
-export default EditProfileInputComponent;
+export default EditProfileInput;

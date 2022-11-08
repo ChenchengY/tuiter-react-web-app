@@ -10,9 +10,8 @@ const ProfileComponent = () => {
     const profile = useSelector((state) => state.profile);
     return (
         <div className='wd-profile-container'>
-            <div style={{display:"flex", alignItems:"center"}}>
-                {/* TODO whats the use of back */}
-								<FontAwesomeIcon icon={faArrowLeft} className='ps-3'/>
+            <div style={{display:"flex", alignItems:"center"}}> 
+							<FontAwesomeIcon icon={faArrowLeft} className='ps-3'/>
                 <div className='ps-4'>
                     <div className='fw-bold fs-5'>
                         {profile.firstName} {profile.lastName}

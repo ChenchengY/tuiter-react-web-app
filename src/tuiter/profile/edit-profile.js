@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import EditProfileInputComponent from "./edit-profile-input";
+import EditProfileInput from "./edit-profile-input";
 import './index.css';
 import moment from 'moment';
 import { updateProfile } from "./profile-reducer";
@@ -67,31 +67,31 @@ const EditProfileComponent = () => {
                 
                 <div style={{marginTop:"90px"}}>
 
-                    <EditProfileInputComponent
+                    <EditProfileInput
                         handleInputChange={handleNameInputChange}
                         value={profile.firstName + `${profile.lastName ? " " + profile.lastName : ""}`}
                         label="Name"
                     />
-                    <EditProfileInputComponent
+                    <EditProfileInput
                         handleInputChange={(event) => handleInputChange(event, "bio")}
                         value={profile.bio}
                         label="Bio"
                     />
 
-                    <EditProfileInputComponent
+                    <EditProfileInput
                         handleInputChange={(event) => handleInputChange(event, "location")}
                         value={profile.location}
                         label="Location"
                     />
 
-                    <EditProfileInputComponent
+                    <EditProfileInput
                         handleInputChange={(event) => handleInputChange(event, "website")}
                         value={profile.website}
                         label="Website"
                     />
                     
 
-                    <EditProfileInputComponent
+                    <EditProfileInput
                         handleInputChange={(event) => handleInputChange(event, "dateOfBirth")}
                         value={moment(profile.dateOfBirth).format('YYYY-MM-DD')}
                         label="Birth Date"
