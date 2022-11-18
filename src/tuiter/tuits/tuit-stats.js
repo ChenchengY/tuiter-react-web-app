@@ -1,12 +1,16 @@
+import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShareAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faShareAlt, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { updateTuitThunk } from '../../services/tuits-thunks';
+import {useDispatch, useSelector}
+  from "react-redux";
 
 const TuitStats = (
 {
   tuit = {
     "_id": 234,
     "topic": "Space",
-    "userName": "SpaceX",
+    "username": "SpaceX",
     "time": "2h",
     "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
     "image": "teslabot.jpg",
@@ -20,6 +24,14 @@ const TuitStats = (
 }
 
 ) => {
+  const {tuitlike} = useSelector((state) => state.tuitsData)
+  const dispatch = useDispatch();
+
+ 
+	useEffect(() => {
+		dispatch(updateTuitThunk())
+	}, [tuitlike]);
+ 
   return (
     <div className="flex-row wd-flex-justifySpaceBetween ms-5 mt-2 text-muted pe-5">
     <div>
@@ -30,12 +42,25 @@ const TuitStats = (
         <i className="bi bi-repeat"> </i>
         {tuit.retuits}
     </div>
-    <div>
+    {/* <div>
         {!tuit.liked ? <i className="bi bi-suit-heart" />:
         <FontAwesomeIcon icon={faHeart} style={{color:"red"}} />}
         &nbsp;{tuit.likes}
          
-    </div>
+    </div> */}
+    <div>
+     Likes: {tuit.likes}
+     <i onClick={() => dispatch(updateTuitThunk({
+       ...tuit,
+       likes: tuit.likes + 1
+     }))} className="bi bi-heart-fill me-2 text-danger"></i>
+     Disikes
+     <i onClick={() => dispatch(updateTuitThunk({
+       ...tuit,
+       likes: tuit.likes - 1
+     }))} className="bi bi-hand-thumbs-down"></i>
+   </div>
+
     <div>
         {/* <i className="fas fa-external-link-alt"> </i> */}
         {/* <FontAwesomeIcon icon={faShareAlt} /> */}

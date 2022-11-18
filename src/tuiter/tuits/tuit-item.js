@@ -7,14 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import TuitStats from './tuit-stats';
 import {useDispatch} from "react-redux";
-import { deleteTuit } from './tuits-reducer';
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 const TuitItem = (
 {
   tuit = {
     "_id": 234,
     "topic": "Space",
-    "userName": "SpaceX",
+    "username": "SpaceX",
     "time": "2h",
     "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
     "image": "teslabot.jpg",
@@ -31,7 +31,7 @@ const TuitItem = (
 ) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-  dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
 }
   return (
   <>
@@ -46,9 +46,10 @@ const TuitItem = (
               
                   <div>
                     <div className="fw-bold">
-                    {tuit.userName} 
+                    {tuit.username == null ? "NASA" : tuit.username} 
                     <FontAwesomeIcon icon={faCircleCheck} style={{color:"royalblue"}} /> 
-                    <span className=" fw-normal text-muted"> {tuit.handle} · {tuit.time}</span>
+                    <span className=" fw-normal text-muted"> {tuit.handle == null ? "@nasa" : tuit.handle} · 
+                      {tuit.time == null ? "1min" : tuit.time}</span>
                     </div>
                   </div>
                   
