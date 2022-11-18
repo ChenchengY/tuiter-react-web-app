@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShareAlt, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faShareAlt} from '@fortawesome/free-solid-svg-icons';
 import { updateTuitThunk } from '../../services/tuits-thunks';
-import {useDispatch, useSelector}
+import {useDispatch}
   from "react-redux";
 
 const TuitStats = (
@@ -24,13 +24,13 @@ const TuitStats = (
 }
 
 ) => {
-  const {tuitlike} = useSelector((state) => state.tuitsData)
+  // const {tuitlike} = useSelector((state) => state.tuitsData)
   const dispatch = useDispatch();
 
  
 	useEffect(() => {
 		dispatch(updateTuitThunk())
-	}, [tuitlike]);
+	}, [dispatch]);
  
   return (
     <div className="flex-row wd-flex-justifySpaceBetween ms-5 mt-2 text-muted pe-5">
