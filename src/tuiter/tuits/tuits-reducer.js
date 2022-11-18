@@ -71,6 +71,23 @@ const tuitsSlice = createSlice({
   }
 
 },
+// reducers: {
+//   createTuit(state, action) {
+//     state.unshift({
+//       ...action.payload,
+//       ...templateTuit,
+//       _id: (new Date()).getTime(),
+//     })
+//   },
+//   deleteTuit(state, action) {
+//     const index = state
+//        .findIndex(tuit =>
+//           tuit._id === action.payload);
+//     state.splice(index, 1);
+//   },
+
+//  }
+
 
 
 });

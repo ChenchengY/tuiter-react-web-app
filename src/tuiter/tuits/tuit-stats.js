@@ -1,9 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareAlt} from '@fortawesome/free-solid-svg-icons';
 import { updateTuitThunk } from '../../services/tuits-thunks';
 import {useDispatch}
   from "react-redux";
+
 
 const TuitStats = (
 {
@@ -28,19 +29,19 @@ const TuitStats = (
   const dispatch = useDispatch();
 
  
-	useEffect(() => {
-		dispatch(updateTuitThunk())
-	}, [dispatch]);
+	// useEffect(() => {
+	// 	dispatch(updateTuitThunk())
+	// }, [dispatch]);
  
   return (
     <div className="flex-row wd-flex-justifySpaceBetween ms-5 mt-2 text-muted pe-5">
     <div>
         <i className="bi bi-chat-left"> </i>
-        {tuit.replies}
+        {tuit.replies == null ? 0 : tuit.replies}
     </div>
     <div>
         <i className="bi bi-repeat"> </i>
-        {tuit.retuits}
+        {tuit.retuits == null ? 0 : tuit.retuits}
     </div>
     {/* <div>
         {!tuit.liked ? <i className="bi bi-suit-heart" />:
@@ -49,17 +50,23 @@ const TuitStats = (
          
     </div> */}
     <div>
-     Likes: {tuit.likes}
-     <i onClick={() => dispatch(updateTuitThunk({
+     Likes: {tuit.likes}{tuit.likes === 0 ? <i onClick={() => dispatch(updateTuitThunk({
        ...tuit,
        likes: tuit.likes + 1
-     }))} className="bi bi-heart-fill me-2 text-danger"></i>
+     }))} className="bi bi-heart me-2"></i>  : <i onClick={() => dispatch(updateTuitThunk({
+       ...tuit,
+       likes: tuit.likes + 1
+     }))} className="bi bi-heart-fill me-2 text-danger"></i>}
+     
      Disikes
      <i onClick={() => dispatch(updateTuitThunk({
        ...tuit,
-       likes: tuit.likes - 1
+       likes: tuit.likes === 0 ? 0 : tuit.likes - 1
      }))} className="bi bi-hand-thumbs-down"></i>
    </div>
+
+
+
 
     <div>
         {/* <i className="fas fa-external-link-alt"> </i> */}
